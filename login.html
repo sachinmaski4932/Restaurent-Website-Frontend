@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <title>Login page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="form-box">
+        <h1>Welcome to Admin Panel</h1>
+        <div class="input-box">
+            <i class="fa fa-envelope-o"></i>
+            <input type="username" class="username" placeholder="username or email id">
+        </div>
+        <div class="input-box">
+            <i class="fa fa-key"></i>
+            <input type="password" class="password" placeholder="enter your password" id="myinput">
+            <span class="eye" onclick="myfunction()">
+                <i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash"></i>
+            </span>
+        </div>
+        <div>
+            <button type="button" class="login-btn">Login</button>
+        </div>
+    </div>
+    <script>
+        function myfunction() {
+            var x = document.getElementById("myinput");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+            if (x.Type === 'password') {
+                x.Type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else {
+                x.Type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
